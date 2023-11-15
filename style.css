@@ -5,65 +5,140 @@
 }
 
 :root {
-  font-size: min(calc(1em + 1vw), 4em);
+  /* font-size: min(calc(1em + 1vw), 4em); */
+  --white: #ffffff;
+  --grey: #dfe4e5;
+  --light-green: #d4e9db;
+  --dark-green: #46aa64;
+  --blue: #0a3250;
+  --black: #111111;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-
   font-family: sans-serif;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: 'kern' 1, 'liga' on, 'dlig' on;
   line-height: 1.5;
-
-  color: DarkSlateGray;
-  background-color: silver;
-}
-
-body > * {
-  padding: 0.2rem;
+  color: var(--blue);
 }
 
 header {
-  background-color: white;
-  margin-bottom: 1rem;
-  color: silver;
+  color: var(--bue);
+  text-align: center;
 }
 
-header > h1 {
-  font-size: 1rem;
-  text-align: right;
+header h1{
+  text-align: center;
+  margin: 0.5em;
+  font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    background-color: var(--dark-green);
+    padding: 1em;
 }
 
 nav li {
-  display: inline;
+    display: inline-block;
+    margin-right: 1em;
 }
 
-nav li a {
-  text-decoration: none;
+nav li:hover{
+  text-decoration: underline;
+  color: var(--white);
 }
 
-nav a.active {
-  font-weight: bold;
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.1em;
 }
+
 
 section {
-  width: min(100%, 38rem);
+  width: min(100%, 60rem);
   background: white;
   border-radius: 0.2rem;
   padding: 0.2rem;
+  margin-left: 15em;
+  margin-top: 1.5em;
 }
+
 section + section {
   margin-top: 1rem;
 }
 
 h3 {
-  border-bottom: DarkSlateGray 1px solid;
+  border-bottom: var(--dark-green) 1px solid;
   margin-bottom: 1rem;
+  font-size: 1.5em;
+  padding: 0.2rem;
+}
+
+p{
+  padding-left: 0.3rem;
+}
+
+h4{
+  padding-left: 0.2rem;
 }
 
 pre {
   padding-left: 0.2rem;
   background: DarkSlateGray;
   color: white;
+}
+
+
+.hallen-header img{
+  width: 60em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.hallen-header ul{
+  margin-left:2em;
+  margin-bottom: 1em;
+}
+
+
+.hallen-logo img{
+  height: 10em;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+.hallen-logo ul{
+  margin-left:2em;
+  margin-bottom: 1em;
+}
+
+.hallen-kleur img{
+  width: 60em;
+  padding-left: 1em;
+  margin: 1em;
+  margin-bottom: 0.5em;
+}
+
+.hallen-kleur ul{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  list-style-type: none;
+}
+
+.hallen-kleur li{
+  margin-left: 6em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+
+.hallen-icon img {
+  width: 55em;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
 }
