@@ -17,6 +17,10 @@
   --black: #111111;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -25,6 +29,13 @@ body {
   font-family: sans-serif;
   color: var(--blue);
 }
+
+
+/*  */
+/*  */
+/* HEADER */
+/*  */
+/*  */
 
 header {
   display: flex;
@@ -37,23 +48,28 @@ header {
 }
 
 header p{
-  font-size: 1.5em;
   font-weight: bold;
-  text-align: left;
-  margin-top: 2em;
-  margin-left: 2.5em;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 header img{
-  width: 8em;
-  margin: 0.5em 4em;
+  width: 8rem;
+  margin: 0.5rem 4rem;
 }
 
 
+/*  */
+/*  */
+/* NAV */
+/*  */
+/*  */
+
 nav ul {
     list-style: none;
-    margin-top: 3em;
-    margin-left: 4em;
+    margin-top: 3rem;
+    margin-left: 4rem;
     width: 20vw;
     height: 100vh;
 }
@@ -61,26 +77,32 @@ nav ul {
 nav a {
     display: block;
     align-self: flex-start;
-    margin-right: 1em;
+    margin-right: 1.1rem;
     color: var(--blue);
-    padding-bottom: 1.5em;
+    padding-bottom: 1.5rem;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 1.3em;
+    font-weight: bold;
+    font-size: 1.2rem;
     transition: font-size 0.4s ease;
 }
 
 nav a:hover{
   text-decoration: underline;
   color: var(--dark-blue);
-  font-size: 1.4em;
+  font-size: 1.3rem;
 }
 
+
+/*  */
+/*  */
+/* GENERAL */
+/*  */
+/*  */
 
 section {
   display: flex;
   flex-direction: column;
-  margin-top: 4em;
+  margin-top: 4rem;
   margin-left: 25rem;
   width: min(100%, 55rem);
   background: var(--white);
@@ -89,8 +111,8 @@ section {
 }
 
 h1{
-  font-size: 2.5em;
-  margin-bottom: 1em;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -115,34 +137,47 @@ pre {
 }
 
 
+/*  */
+/*  */
+/* HALLEN-LOGO */
+/*  */
+/*  */
+
 .hallen-logo img{
-  height: 8em;
-  width: 15em;
-  margin-bottom: 1.5em;
+  height: 8rem;
+  width: 15rem;
+  margin-bottom: 1.5rem;
   align-items: center;
 }
 
 .hallen-logo ul{
-  margin-left:2em;
-  margin-bottom: 1em;
+  margin-left:2rem;
+  margin-bottom: 1rem;
 }
 
+
+/*  */
+/*  */
+/* HALLEN-KLEUR */
+/*  */
+/*  */
+
 .kleur-main{
-  width: 55em;
-  margin: 0.5em 0;
+  width: 55rem;
+  margin: 0.5rem 0;
   border: 2px solid var(--black);
 }
 
 .hallen-kleur ul{
   display: flex;
   flex-direction: row;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   list-style-type: none;
   justify-content: space-between;
 }
 
 .hallen-kleur li{
-  font-size: 1.1em;
+  font-size: 1rem;
   justify-content: space-between;
 }
 
@@ -153,36 +188,92 @@ pre {
 }
 
 .groen, .blauw {
-  width: 25em;
-  height: 3em;
-  margin: 0.5em 1em;
- 
+  width: 25rem;
+  height: 3rem;
+  margin: 0.5rem 1rem;
   border: none;
 }
 
+
+/*  */
+/*  */
+/* HALLEN-TYPO */
+/*  */
+/*  */
+
 .hallen-typo img{
-  padding: 0.5em 3em;
+  padding: 0.5rem ;
 }
 
+.hallen-typo h1 {
+  font-size: 2.5rem;
+}
+
+.hallen-typo h2{
+  font-size: 1.5rem;
+}
+
+.hallen-typo p{
+  font-size: 1rem;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 1rem;
+}
+
+td, th{
+  border: 1px solid #ddd;
+  padding: 0.6rem;
+  text-align: left;
+  width: 30%;
+}
+
+th {
+  background-color: var(--grey);
+  font-weight: bold;
+}
+
+
+/*  */
+/*  */
+/* HALLEN-ICON */
+/*  */
+/*  */
+
 .hallen-icon img {
-  width: 29em;
-  margin-bottom: 0.5em;
+  width: 35rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.hallen-icon p{
+  margin: 0.5rem;
 }
 
 .down-icons{
-  height: 3em;
-  padding: 1em 3em 0.5em 3em;
+  height: 3rem;
+  padding: 1rem 3rem 0.5rem 3rem;
 }
+
+
+/*  */
+/*  */
+/* HALLEN-BUTTON */
+/*  */
+/*  */
 
 .primary{
   background-color: var(--blue);
   color: var(--white);
-  padding: 1em;
+  padding: 1rem;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
   border: none;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .primary:hover{
@@ -192,9 +283,9 @@ pre {
 .secondary{
   background-color: var(--green);
   color: var(--white);
-  padding: 1em;
+  padding: 1rem;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
   border: none;
 }
 
@@ -205,9 +296,9 @@ pre {
 .tertiary{
   background-color: var(--button-green);
   color: var(--white);
-  padding: 1em;
+  padding: 1rem;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
   border: none;
 }
 
@@ -216,7 +307,7 @@ pre {
 }
 
 .hallen-button li{
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
   list-style-type: none;
 }
 
