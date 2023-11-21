@@ -17,6 +17,30 @@
   --black: #111111;
 }
 
+@font-face {
+  font-family: "AvantGarde-Bold";
+  src: local("Avant Garde Bold"), local("AvantGarde-Bold"),
+    url("./font/AvantGarde-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "AvantGarde-Med";
+  src: local("Avant Garde Medium"), local("AvantGarde-Med"),
+    url("./font/AvantGarde-Med.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "AvantGarde-light";
+  src: local("Avant Garde Light"), local("AvantGarde-Light"),
+    url("./font/AvantGarde-Light.ttf");
+  font-weight: 500;
+}
+
+
+
+
 html {
   font-size: 16px;
 }
@@ -26,7 +50,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   line-height: 1.5;
-  font-family: sans-serif;
   color: var(--blue);
 }
 
@@ -44,7 +67,7 @@ header {
   height: 100vh;
   width: 20vw;
   color: var(--blue);
-  border-right: 2px solid black;
+  border-right: 3px solid var(--light-green);
 }
 
 header p{
@@ -110,16 +133,28 @@ section {
   padding: 0.2rem;
 }
 
+h1, h2, h3, h4, h5, h6, th{
+  font-family: 'AvantGarde-Bold', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1{
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 h3 {
-  border-bottom: var(--green) 1px solid;
+  font-size: 1.5rem;
+  border-bottom: var(--light-green) 2px solid;
   margin-bottom: 2rem;
-  font-size: 1.5em;
   padding: 0.2rem;
+}
+
+p, a, li, td{
+  font-family: 'AvantGarde-Med', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 p{
@@ -128,12 +163,14 @@ p{
 
 h4{
   padding-left: 0.2rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 pre {
-  padding-left: 0.2rem;
-  background: DarkSlateGray;
-  color: white;
+  margin: 0.5rem;
+  background: var(--grey);
+  color: var(--blue);
 }
 
 
@@ -162,6 +199,9 @@ pre {
 /*  */
 /*  */
 
+.hallen-kleur h4{
+  margin: 0.5rem 0;
+}
 .kleur-main{
   width: 55rem;
   margin: 0.5rem 0;
@@ -177,8 +217,9 @@ pre {
 }
 
 .hallen-kleur li{
-  font-size: 1rem;
+  font-size: 1.1rem;
   justify-content: space-between;
+  color: var(--green);
 }
 
 .groen-blauw{
@@ -190,7 +231,7 @@ pre {
 .groen, .blauw {
   width: 25rem;
   height: 3rem;
-  margin: 0.5rem 1rem;
+  margin: 1rem;
   border: none;
 }
 
@@ -201,21 +242,31 @@ pre {
 /*  */
 /*  */
 
-.hallen-typo img{
-  padding: 0.5rem ;
-}
-
-.hallen-typo h1 {
-  font-size: 2.5rem;
-}
-
-.hallen-typo h2{
-  font-size: 1.5rem;
-}
-
 .hallen-typo p{
   font-size: 1rem;
 }
+
+.bold{
+  font-family: 'AvantGarde-Bold', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0.5rem;
+}
+
+.regular{
+  font-family: 'AvantGarde-Med', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0.5rem;
+}
+
+.light{
+  font-family: 'AvantGarde-light', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0.5rem;
+}
+
 
 table {
   width: 80%;
@@ -224,16 +275,19 @@ table {
 }
 
 td, th{
-  border: 1px solid #ddd;
+  border: 1px solid var(--grey);
   padding: 0.6rem;
   text-align: left;
   width: 30%;
 }
 
 th {
-  background-color: var(--grey);
+  background-color: var(--light-green);
   font-weight: bold;
 }
+
+
+
 
 
 /*  */
@@ -250,12 +304,41 @@ th {
 }
 
 .hallen-icon p{
-  margin: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.down-icons{
-  height: 3rem;
-  padding: 1rem 3rem 0.5rem 3rem;
+.hallen-icon a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.hallen-icon a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.fa-instagram, .fa-facebook-f {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.fa-instagram:hover, .fa-facebook-f:hover {
+  color: var(--green);
+}
+
+.fa-calendar, .fa-clock {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  color: var(--green);
+}
+
+.fa-calendar:hover, .fa-clock:hover{
+  color: var(--dark-green);
 }
 
 
@@ -272,8 +355,7 @@ th {
   font-weight: bold;
   font-size: 1rem;
   border: none;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 .primary:hover{
@@ -287,6 +369,7 @@ th {
   font-weight: bold;
   font-size: 1rem;
   border: none;
+  margin: 1rem;
 }
 
 .secondary:hover{
@@ -300,6 +383,7 @@ th {
   font-weight: bold;
   font-size: 1rem;
   border: none;
+  margin: 1rem;
 }
 
 .tertiary:hover{
