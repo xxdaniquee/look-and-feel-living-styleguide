@@ -4,8 +4,9 @@
   padding: 0;
 }
 
+
 :root {
-  /* font-size: min(calc(1em + 1vw), 4em); */
+  /* COLORS */
   --white: #ffffff;
   --grey: #dfe4e5;
   --light-green: #d4e9db;
@@ -16,8 +17,10 @@
   --dark-blue: #062026;
   --black: #111111;
 
+  /* TRANSITION */
   --transition: 0.4s ease;
 }
+
 
 @font-face {
   font-family: "AvantGarde-Bold";
@@ -39,8 +42,6 @@
     url("./font/AvantGarde-Light.ttf");
   font-weight: 500;
 }
-
-
 
 
 html {
@@ -430,4 +431,52 @@ th {
   color: var(--dark-green);
   text-decoration: underline;
   font-size: 1.1rem;
+}
+
+
+/*  */
+/*  */
+/* HALLEN-NAV */
+/*  */
+/* */
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-family: 'AvantGarde-Med', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 1rem 0 0 1rem;
+  color: var(--blue);
+}
+
+input[type="text"] {
+  padding: 1rem;
+  width: 15rem;
+  margin: 1rem;
+  border: none;
+  background-color: var(--grey);
+}
+
+
+/*  */
+/*  */
+/* FOOTER */
+/*  */
+/* */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  margin-left: 18rem;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 3rem;
+}
+
+footer i, footer p {
+  font-size: 1rem;
 }

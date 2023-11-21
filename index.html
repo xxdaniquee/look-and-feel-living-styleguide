@@ -61,7 +61,6 @@
           <h3>Kleur</h3>
           <p>Wij maken gebruik van de volgende kleuren:</p>
           <img class="kleur-main" src="./assets/Kleur/kleur.png" alt="Kleuren van De Hallen website" />
-         
             <ul>
                 <li>#0A3250</li>
                 <li>#46AA64</li>
@@ -91,7 +90,7 @@
             </code></pre>
           
             <h4>Hover kleur</h4>
-                <p>Bij buttons, links en iconen gebruiken wij <i>':hover'</i>. Daarbij wordt de gebruikte kleur donkerder. <br> Bijvoorbeeld:</p>
+              <p>Bij buttons, links en iconen gebruiken wij <i>':hover'</i>. Daarbij wordt de gebruikte kleur donkerder. <br> Bijvoorbeeld:</p>
               <div class=".groen-blauw">
                 <img class="groen" src="./assets/Kleur/groen.png" alt="2 verschillende tinten groen" />
                 <img class="blauw" src="./assets/Kleur/blauw.png" alt="2 verschillende tinten blauw" />
@@ -106,7 +105,6 @@
                   background-color: var(--dark-green);
                 }
               </code></pre>
-          
           
       </section>
 
@@ -178,7 +176,6 @@
       </section>
 
 
-
 <!-- HALLEN-ICON -->
 
       <section class="hallen-icon">
@@ -205,9 +202,6 @@
               &lt;i class="fa-regular fa-calendar"&gt;&lt;/i&gt;
             </code></pre>
 
-
-
-      
       </section>
 
 <!-- HALLEN-BUTTON -->
@@ -217,7 +211,6 @@
         <h4>Button opties</h4>
         <p>Wij gebruiken 3 verschillende buttons in de huisstijl:</p>
         
-
         <table>
           <thead>
             <th>Primary</th>
@@ -239,7 +232,6 @@
         </table>
 
         <p>Voorbeeld code voor de primary button:</p>
-
         <pre><code>
           &lt;button class="primary">Primary button&lt;/button&gt;
 
@@ -284,29 +276,53 @@
             color: var(--dark-green);
           }
         </code></pre>
+
       </section>
 
 <!-- HALLEN-FORM -->
 
       <section class="hallen-form">
           <h3>Formulieren</h3>
-          <img src="" alt="" />
-          
-          <p>
-          </p>
+          <p>Formulieren worden gebruikt om gegevens te verzamlen wanneer de gebruiker zich aanmeld.</p>
 
-          <h4>Toegankelijkheid</h4>
-          <p> </p>
+          <form>
+            <label for="organisatie-naam">Naam</label>
+            <input type="text" class="naam" name="naam" required>
+          </form>
+          
+          <p>Voorbeeld code:</p>
+          <pre><code>
+            &lt;form&gt;
+              &lt;label for="organisatie-naam">Naam&lt;/label&gt;
+              &lt;input type="text" class="naam" name="naam" required&gt;
+            &lt;/form&gt;
+            
+            styling:
+            label {
+              font-family: 'AvantGarde-Med', arial, sans-serif;
+              font-weight: normal;
+              font-style: normal;
+              margin: 1rem;
+              color: var(--blue);
+            }
+            
+            input[type="text"] {
+              padding: 1rem;
+              width: 15rem;
+              margin: 1rem;
+              border: none;
+              background-color: var(--grey);
+            }
+          </code></pre>
+          
       </section>
 
-
-
-        <!-- Om HTML in HTML te laten zien gebruik je &lt; voor de < en &gt; voor de > -->
-        
-     
-  
-
-      
     </main>
+
+    <footer>
+      <i class="fa-regular fa-copyright"></i>
+      <p>De Hallen 2023</p>
+    </footer>
+
   </body>
 </html>
