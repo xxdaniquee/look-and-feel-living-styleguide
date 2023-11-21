@@ -4,7 +4,8 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>De Hallen living styleguide</title>
+      <title>De Hallen Styleguide</title>
+      <link rel="icon" type="image/x-icon" href="./assets/icon/Tab-icon.png">
       <link rel="stylesheet" href="style.css" />
       <script src="https://kit.fontawesome.com/319280bb92.js" crossorigin="anonymous"></script>
   </head>
@@ -21,10 +22,9 @@
               <li><a href="#logo">Logo</a></li>
               <li><a href="#Kleur">Kleur</a></li>
               <li><a href="#Typografie">Typografie</a></li>
-              <li><a href="#Beeldgebruik">Beeldgebruik</a></li>
-              <li><a href="#Typografie">Typografie</a></li>
               <li><a href="#icons">Icons</a></li>
               <li><a href="#buttons">Buttons</a></li>
+              <li><a href="#Navigatie">Navigatie</a></li>
               <li><a href="#Formulieren">Formulieren</a></li>
            </ul>
         </nav>
@@ -59,7 +59,7 @@
 
       <section class="hallen-kleur">
           <h3>Kleur</h3>
-          <p>Kleuren communiceren niet alleen onze merkpersoonlijkheid en waarden, maar ze spelen ook een essentiële rol bij het begeleiden van gebruikers door de interface. Hieronder vind je meer informatie over ons gebruik van kleuren.</p>
+          <p>Wij maken gebruik van de volgende kleuren:</p>
           <img class="kleur-main" src="./assets/Kleur/kleur.png" alt="Kleuren van De Hallen website" />
          
             <ul>
@@ -91,12 +91,21 @@
             </code></pre>
           
             <h4>Hover kleur</h4>
-                <p>Onderstaande kleuren laat de kleuren zien wanneer de gebruiker met de muis over dat onderdeel heen gaat. Bij zowel groen als blauw wordt het donkderder bij een 'hover'.</p>
+                <p>Bij buttons, links en iconen gebruiken wij <i>':hover'</i>. Daarbij wordt de gebruikte kleur donkerder. <br> Bijvoorbeeld:</p>
               <div class=".groen-blauw">
                 <img class="groen" src="./assets/Kleur/groen.png" alt="2 verschillende tinten groen" />
                 <img class="blauw" src="./assets/Kleur/blauw.png" alt="2 verschillende tinten blauw" />
               </div>
 
+              <pre><code>
+                button {
+                  background-color: var(--green);
+                }
+
+                button:hover {
+                  background-color: var(--dark-green);
+                }
+              </code></pre>
           
           
       </section>
@@ -168,6 +177,8 @@
 
       </section>
 
+
+
 <!-- HALLEN-ICON -->
 
       <section class="hallen-icon">
@@ -227,7 +238,52 @@
           </tbody>
         </table>
 
+        <p>Voorbeeld code voor de primary button:</p>
 
+        <pre><code>
+          &lt;button class="primary">Primary button&lt;/button&gt;
+
+          .primary{
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+            border: none;
+            margin: 1rem;
+            transition: font-size 0.4s ease;
+          }
+          .primary:hover{
+            background-color: var(--dark-blue);
+            font-size: 1.1rem;
+          }
+        </code></pre>
+
+      </section>
+
+      <!-- HALLEN NAVIGATIE-->
+
+      <section class="hallen-nav">
+        <h3>Navigatie</h3>
+        <p>In de header gebruiken wij een <i>'hamburgermenu'</i> voor de navigatie naar de rest van de site.<br> Dit icoon is te vinden op <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>.</p>
+        <i class="fa-solid fa-bars"></i>
+
+        <pre><code>
+          &lt;i class="fa-solid fa-bars"&gt;&lt;/i&gt;
+
+          Styling:
+          .fa-bars {
+            font-size: 2rem;
+            margin: 1rem;
+            padding: 1rem;
+            color: var(--green);
+            transition: var(--transition);
+          }
+          
+          .fa-bars:hover {
+            color: var(--dark-green);
+          }
+        </code></pre>
       </section>
 
 <!-- HALLEN-FORM -->

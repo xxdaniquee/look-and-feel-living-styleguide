@@ -15,6 +15,8 @@
   --blue: #0a3250;
   --dark-blue: #062026;
   --black: #111111;
+
+  --transition: 0.4s ease;
 }
 
 @font-face {
@@ -287,9 +289,6 @@ th {
 }
 
 
-
-
-
 /*  */
 /*  */
 /* HALLEN-ICON */
@@ -324,6 +323,7 @@ th {
   padding: 1rem;
   color: var(--white);
   background-color: var(--blue);
+  transition: var(--transition);
 }
 
 .fa-instagram:hover, .fa-facebook-f:hover {
@@ -335,6 +335,7 @@ th {
   margin: 1rem;
   padding: 1rem;
   color: var(--green);
+  transition: var(--transition);
 }
 
 .fa-calendar:hover, .fa-clock:hover{
@@ -356,10 +357,12 @@ th {
   font-size: 1rem;
   border: none;
   margin: 1rem;
+  transition: var(--transition);
 }
 
 .primary:hover{
   background-color: var(--dark-blue);
+  font-size: 1.1rem;
 }
 
 .secondary{
@@ -370,10 +373,12 @@ th {
   font-size: 1rem;
   border: none;
   margin: 1rem;
+  transition: var(--transition);
 }
 
 .secondary:hover{
   background-color: var(--dark-green);
+  font-size: 1.1rem;
 }
 
 .tertiary{
@@ -384,14 +389,45 @@ th {
   font-size: 1rem;
   border: none;
   margin: 1rem;
+  transition: var(--transition);
 }
 
 .tertiary:hover{
   background-color: var(--green);
+  font-size: 1.1rem;
 }
 
-.hallen-button li{
-  margin-bottom: 0.5rem;
-  list-style-type: none;
+.hallen-button table{
+  margin: 1.5rem;
 }
 
+
+/*  */
+/*  */
+/* HALLEN-NAV */
+/*  */
+/* */
+
+.fa-bars {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  color: var(--green);
+  transition: var(--transition);
+}
+
+.fa-bars:hover {
+  color: var(--dark-green);
+}
+
+.hallen-nav a {
+  color: var(--green);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.hallen-nav a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
