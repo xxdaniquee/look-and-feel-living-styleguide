@@ -7,15 +7,17 @@
 
 :root {
   /* COLORS */
-  --white: #ffffff;
-  --grey: #dfe4e5;
-  --light-green: #d4e9db;
-  --green: #46aa64;
-  --dark-green: #2A633B;
-  --button-green: #8AC59F;
-  --blue: #0a3250;
-  --dark-blue: #062026;
-  --black: #111111;
+  --c-background: #ffffff;
+  --c-textblock: #dfe4e5;
+  --c-accent-green: #d4e9db;
+  --c-main-green: #46aa64;
+  --c-hover-green: #2A633B;
+  --c-main-blue: #0a3250;
+  --c-hover-blue: #062026;
+  --c-ex-dark: #111111;
+
+  /* BORDER */
+  --border: 3px solid var(--c-accent-green);
 
   /* TRANSITION */
   --transition: 0.4s ease;
@@ -33,14 +35,14 @@
   font-family: "AvantGarde-Med";
   src: local("Avant Garde Medium"), local("AvantGarde-Med"),
     url("./font/AvantGarde-Med.ttf");
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "AvantGarde-light";
   src: local("Avant Garde Light"), local("AvantGarde-Light"),
     url("./font/AvantGarde-Light.ttf");
-  font-weight: 500;
+  font-weight: 300;
 }
 
 
@@ -53,7 +55,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   line-height: 1.5;
-  color: var(--blue);
+  color: var(--c-main-blue);
 }
 
 
@@ -69,8 +71,7 @@ header {
   position: fixed;
   height: 100vh;
   width: 20vw;
-  color: var(--blue);
-  border-right: 3px solid var(--light-green);
+  border-right: var(--border);
 }
 
 header p{
@@ -104,7 +105,7 @@ nav a {
     display: block;
     align-self: flex-start;
     margin-right: 1.1rem;
-    color: var(--blue);
+    color: var(--c-main-blue);
     padding-bottom: 1.5rem;
     text-decoration: none;
     font-weight: bold;
@@ -114,7 +115,7 @@ nav a {
 
 nav a:hover{
   text-decoration: underline;
-  color: var(--dark-blue);
+  color: var(--c-hover-blue);
   font-size: 1.3rem;
 }
 
@@ -131,7 +132,6 @@ section {
   margin-top: 4rem;
   margin-left: 25rem;
   width: min(100%, 55rem);
-  background: var(--white);
   border-radius: 0.2rem;
   padding: 0.2rem;
 }
@@ -143,24 +143,21 @@ h1, h2, h3, h4, h5, h6, th{
 }
 
 h1{
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  border-bottom: var(--light-green) 2px solid;
+  border-bottom: var(--border);
   margin-bottom: 2rem;
-  padding: 0.2rem;
 }
 
 p, a, li, td{
   font-family: 'AvantGarde-Med', arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-}
-
-p{
+  font-size: 1rem;
   padding-left: 0.3rem;
 }
 
@@ -172,8 +169,7 @@ h4{
 
 pre {
   margin: 0.5rem;
-  background: var(--grey);
-  color: var(--blue);
+  background: var(--c-textblock);
 }
 
 
@@ -208,7 +204,7 @@ pre {
 .kleur-main{
   width: 55rem;
   margin: 0.5rem 0;
-  border: 2px solid var(--black);
+  border: 2px solid var(--c-ex-dark);
 }
 
 .hallen-kleur ul{
@@ -220,9 +216,8 @@ pre {
 }
 
 .hallen-kleur li{
-  font-size: 1.1rem;
   justify-content: space-between;
-  color: var(--green);
+  color: var(--c-main-green);
 }
 
 .groen-blauw{
@@ -244,10 +239,6 @@ pre {
 /* HALLEN-TYPO */
 /*  */
 /*  */
-
-.hallen-typo p{
-  font-size: 1rem;
-}
 
 .bold{
   font-family: 'AvantGarde-Bold', arial, sans-serif;
@@ -278,14 +269,14 @@ table {
 }
 
 td, th{
-  border: 1px solid var(--grey);
+  border: 1px solid var(--c-textblock);
   padding: 0.6rem;
   text-align: left;
   width: 30%;
 }
 
 th {
-  background-color: var(--light-green);
+  background-color: var(--c-accent-green);
   font-weight: bold;
 }
 
@@ -308,12 +299,12 @@ th {
 }
 
 .hallen-icon a {
-  color: var(--green);
+  color: var(--c-main-green);
   text-decoration: none;
 }
 
 .hallen-icon a:hover {
-  color: var(--dark-green);
+  color: var(--c-hover-green);
   text-decoration: underline;
   font-size: 1.1rem;
 }
@@ -322,25 +313,25 @@ th {
   font-size: 2rem;
   margin: 1rem;
   padding: 1rem;
-  color: var(--white);
-  background-color: var(--blue);
+  color: var(--c-background);
+  background-color: var(--c-main-blue);
   transition: var(--transition);
 }
 
 .fa-instagram:hover, .fa-facebook-f:hover {
-  color: var(--green);
+  color: var(--c-main-green);
 }
 
 .fa-calendar, .fa-clock {
   font-size: 2rem;
   margin: 1rem;
   padding: 1rem;
-  color: var(--green);
+  color: var(--c-main-green);
   transition: var(--transition);
 }
 
 .fa-calendar:hover, .fa-clock:hover{
-  color: var(--dark-green);
+  color: var(--c-hover-green);
 }
 
 
@@ -351,50 +342,47 @@ th {
 /*  */
 
 .primary{
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--c-main-blue);
+  color: var(--c-background);
   padding: 1rem;
   font-weight: bold;
-  font-size: 1rem;
   border: none;
   margin: 1rem;
   transition: var(--transition);
 }
 
 .primary:hover{
-  background-color: var(--dark-blue);
+  background-color: var(--c-hover-blue);
   font-size: 1.1rem;
 }
 
 .secondary{
-  background-color: var(--green);
-  color: var(--white);
+  background-color: var(--c-main-green);
+  color: var(--c-background);
   padding: 1rem;
   font-weight: bold;
-  font-size: 1rem;
   border: none;
   margin: 1rem;
   transition: var(--transition);
 }
 
 .secondary:hover{
-  background-color: var(--dark-green);
+  background-color: var(--c-hover-green);
   font-size: 1.1rem;
 }
 
 .tertiary{
-  background-color: var(--button-green);
+  background-color: var(--c-accent-green);
   color: var(--white);
   padding: 1rem;
   font-weight: bold;
-  font-size: 1rem;
   border: none;
   margin: 1rem;
   transition: var(--transition);
 }
 
 .tertiary:hover{
-  background-color: var(--green);
+  background-color: var(--c-main-green);
   font-size: 1.1rem;
 }
 
@@ -413,22 +401,22 @@ th {
   font-size: 2rem;
   margin: 1rem;
   padding: 1rem;
-  color: var(--green);
+  color: var(--c-main-green);
   transition: var(--transition);
 }
 
 .fa-bars:hover {
-  color: var(--dark-green);
+  color: var(--c-hover-green);
 }
 
 .hallen-nav a {
-  color: var(--green);
+  color: var(--c-main-green);
   text-decoration: none;
   transition: var(--transition);
 }
 
 .hallen-nav a:hover {
-  color: var(--dark-green);
+  color: var(--c-hover-green);
   text-decoration: underline;
   font-size: 1.1rem;
 }
@@ -449,7 +437,6 @@ label {
   font-weight: normal;
   font-style: normal;
   margin: 1rem 0 0 1rem;
-  color: var(--blue);
 }
 
 input[type="text"] {
@@ -457,7 +444,7 @@ input[type="text"] {
   width: 15rem;
   margin: 1rem;
   border: none;
-  background-color: var(--grey);
+  background-color: var(--c-textblock);
 }
 
 
@@ -472,11 +459,7 @@ footer {
   flex-direction: row;
   margin-top: 4rem;
   margin-left: 18rem;
-  background-color: var(--green);
-  color: var(--white);
+  background-color: var(--c-main-green);
   padding: 3rem;
 }
 
-footer i, footer p {
-  font-size: 1rem;
-}
